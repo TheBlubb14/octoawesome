@@ -12,7 +12,6 @@ function InstallMesaOpenGL ($arch, $basedir) {
 	}
 	cp $source_path $filepath
 }
-fu
 
 wget https://github.com/jvbsl/MesaBinary/releases/download/19/opengl_win_dll.zip -OutFile download.zip
 Expand-Archive -Force ./download.zip
