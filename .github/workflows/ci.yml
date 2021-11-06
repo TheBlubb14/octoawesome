@@ -26,10 +26,10 @@ jobs:
           dotnet-version: 5.0.x
 
       - name: Build
-        run: dotnet build .\OctoAwesome\ --configuration Release
+        run: dotnet build ./OctoAwesome/ --configuration Release
 
       - name: Publish Client
-        run: dotnet publish .\OctoAwesome\OctoAwesome.Client\OctoAwesome.Client.csproj --configuration Release --output OctoAwesomeClient
+        run: dotnet publish ./OctoAwesome/OctoAwesome.Client/OctoAwesome.Client.csproj --configuration Release --output OctoAwesomeClient
 
       - name: Upload Client
         uses: actions/upload-artifact@v2.2.4
@@ -38,7 +38,7 @@ jobs:
           path: OctoAwesomeClient/
 
       - name: Publish Server
-        run: dotnet publish .\OctoAwesome\OctoAwesome.GameServer\OctoAwesome.GameServer.csproj --configuration Release --output OctoAwesomeServer
+        run: dotnet publish ./OctoAwesome/OctoAwesome.GameServer/OctoAwesome.GameServer.csproj --configuration Release --output OctoAwesomeServer
 
       - name: Upload Server
         uses: actions/upload-artifact@v2.2.4
