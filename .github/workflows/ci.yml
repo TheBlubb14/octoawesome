@@ -21,10 +21,11 @@ jobs:
         uses: actions/checkout@v2.4.0
 
       - name: Install OpenGL in linux
+        env:
+          DISPLAY: :99.0
         run: |
           sudo apt-get update
           sudo apt-get install -y libgl1-mesa-dev
-          export DISPLAY=:99.0
           sudo sh -e /etc/init.d/xvfb start
         if: matrix.os == 'ubuntu-latest'
 
