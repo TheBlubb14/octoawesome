@@ -26,8 +26,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y locate libgl1-mesa-dev
-          updatedb
-          locate xvfb
+          sudo updatedb
+          sudo locate xvfb
           sudo sh -e /etc/init.d/xvfb start
         if: matrix.os == 'ubuntu-latest'
 
