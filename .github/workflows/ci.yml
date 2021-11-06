@@ -23,9 +23,9 @@ jobs:
       - name: Install OpenGL in linux
         run: |
           sudo apt-get update
-          sudo apt-get install -y xvfb libgl1-mesa-dev
+          sudo apt-get install -y libgl1-mesa-dev
           export DISPLAY=:99.0
-          sh -e /etc/init.d/xvfb start
+          sudo sh -e /etc/init.d/xvfb start
         if: matrix.os == 'ubuntu-latest'
 
       - name: Install OpenAl on linux
