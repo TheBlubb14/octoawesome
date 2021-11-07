@@ -25,7 +25,7 @@ jobs:
           DISPLAY: :99.0
         run: |
           sudo apt-get update
-          sudo apt-get install -y locate Xvfb libgl1-mesa-dev
+          sudo apt-get install -y locate xvfb libgl1-mesa-dev
           set -e
           set -x
           sudo locate Xvfb
