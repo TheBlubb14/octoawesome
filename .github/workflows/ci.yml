@@ -20,8 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.0
 
-      - uses: openrndr/setup-opengl@v1.1
-          if: matrix.os == 'ubuntu-18.04'
+      # - uses: openrndr/setup-opengl@v1.1
+      #     if: matrix.os == 'ubuntu-18.04'
       - run: |
           sudo apt-get install libglfw3
           xvfb-run glxinfo
