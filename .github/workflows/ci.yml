@@ -14,26 +14,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix: 
-        os: [ubuntu-latest]
+        os: [ubuntu-bionic]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
 
-      - name: Install OpenGL in linux
-        env:
-          DISPLAY: :99.0
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y locate libgl1-mesa-dev
-          set -e
-          set -x
-          Xvfb :99 &
-        if: matrix.os == 'ubuntu-latest'
+      - uses: openrndr/setup-opengl@v1.1
+      - run: xvfb-run glxinfo
+        if: matrix.os == 'ubuntu-bionic'
 
       - name: Install OpenAl on linux
         run: sudo apt-get install libopenal1
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-bionic'
 
       - name: Setup OpenGL on windows
         run: ./.github/install-mesa-windows.ps1
