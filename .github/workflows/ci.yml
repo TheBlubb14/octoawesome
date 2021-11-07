@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix: 
-        os: [ubuntu-bionic]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout
@@ -22,11 +22,11 @@ jobs:
 
       - uses: openrndr/setup-opengl@v1.1
       - run: xvfb-run glxinfo
-        if: matrix.os == 'ubuntu-bionic'
+        if: matrix.os == 'ubuntu-latest'
 
       - name: Install OpenAl on linux
         run: sudo apt-get install libopenal1
-        if: matrix.os == 'ubuntu-bionic'
+        if: matrix.os == 'ubuntu-latest'
 
       - name: Setup OpenGL on windows
         run: ./.github/install-mesa-windows.ps1
