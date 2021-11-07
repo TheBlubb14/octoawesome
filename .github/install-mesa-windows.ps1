@@ -20,4 +20,5 @@ Expand-Archive -Force ./download.zip
 InstallMesaOpenGL "x86" "$env:WINDIR\SysWOW64\"
 InstallMesaOpenGL "x86_64" "$env:WINDIR\system32\"
 
-./wglinfo.exe
+.\wglinfo.exe
+return 0
