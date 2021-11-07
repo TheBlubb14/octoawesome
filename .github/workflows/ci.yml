@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix: 
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout
@@ -28,7 +28,8 @@ jobs:
           sudo apt-get install -y locate libgl1-mesa-dev
           set -e
           set -x
-          sudo chmod /usr/bin/xvfb-run +x
+          file /usr/bin/xvfb-run
+          sudo chmod +x /usr/bin/xvfb-run
           sudo sh -e /usr/bin/xvfb-run start
         if: matrix.os == 'ubuntu-latest'
 
