@@ -56,7 +56,7 @@ jobs:
           dotnet-version: 5.0.x
 
       - name: Build
-        run: dotnet build ./OctoAwesome/ --configuration Release
+        run: dotnet build ./OctoAwesome/OctoAwesome.sln --configuration Release
 
       - name: Publish Client
         run: dotnet publish ./OctoAwesome/OctoAwesome.Client/OctoAwesome.Client.csproj --configuration Release --output OctoAwesomeClient

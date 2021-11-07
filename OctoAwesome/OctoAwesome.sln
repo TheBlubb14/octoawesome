@@ -18,8 +18,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctoAwesome.Client", "OctoA
 		{739F0779-A605-49C9-A298-FE30DC628C9E} = {739F0779-A605-49C9-A298-FE30DC628C9E}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctoAwesome.Docs", "OctoAwesome.Docs\OctoAwesome.Docs.csproj", "{A144F0E6-716C-40C1-83DD-A1039DA7F73B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctoAwesome.Community", "OctoAwesome.Community\OctoAwesome.Community.csproj", "{016407F4-814F-4183-855F-FA32C7378261}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctoAwesome.Network", "OctoAwesome.Network\OctoAwesome.Network.csproj", "{B1F4D7BB-7F56-4E96-87DD-EBEBAE9CF336}"
@@ -86,13 +84,6 @@ Global
 		{FBCB341A-ACD0-4511-AD71-006779B90151}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBCB341A-ACD0-4511-AD71-006779B90151}.Release|x86.ActiveCfg = Release|Any CPU
 		{FBCB341A-ACD0-4511-AD71-006779B90151}.Release|x86.Build.0 = Release|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Debug|x86.Build.0 = Debug|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Release|x86.ActiveCfg = Release|Any CPU
-		{A144F0E6-716C-40C1-83DD-A1039DA7F73B}.Release|x86.Build.0 = Release|Any CPU
 		{016407F4-814F-4183-855F-FA32C7378261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{016407F4-814F-4183-855F-FA32C7378261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{016407F4-814F-4183-855F-FA32C7378261}.Debug|x86.ActiveCfg = Debug|Any CPU
