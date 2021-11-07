@@ -1,3 +1,4 @@
+Set-PSDebug -Trace 1
 function grantRights($file) {
 	takeown /f $file
 	icacls $file /grant "${env:ComputerName}\${env:UserName}:F"
@@ -19,6 +20,5 @@ Expand-Archive -Force ./download.zip
 
 InstallMesaOpenGL "x86" "$env:WINDIR\SysWOW64\"
 InstallMesaOpenGL "x86_64" "$env:WINDIR\system32\"
-
+Write-Host "Done"
 .\wglinfo.exe
-return 0
