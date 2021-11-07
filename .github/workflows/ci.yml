@@ -25,12 +25,11 @@ jobs:
           DISPLAY: :99.0
         run: |
           sudo apt-get update
-          sudo apt-get install -y locate libgl1-mesa-dev
+          sudo apt-get install -y libgl1-mesa-dev
           set -e
           set -x
-          file /usr/bin/xvfb-run
           sudo chmod +x /usr/bin/xvfb-run
-          sudo sh -e /usr/bin/xvfb-run start
+          sudo sh -e /usr/bin/xvfb-run
         if: matrix.os == 'ubuntu-latest'
 
       - name: Install OpenAl on linux
