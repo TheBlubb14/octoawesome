@@ -21,7 +21,9 @@ jobs:
         uses: actions/checkout@v2.4.0
 
       - uses: openrndr/setup-opengl@v1.1
-      - run: xvfb-run glxinfo
+      - run: |
+          sudo apt-get libglfw3
+          xvfb-run glxinfo
         if: matrix.os == 'ubuntu-18.04'
 
       - name: Install OpenAl on linux
