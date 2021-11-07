@@ -4,7 +4,7 @@ function grantRights($file) {
 }
 
 function InstallMesaOpenGL ($arch, $basedir) {
-	$source_path = "./download/build/$arch/opengl32.dll"
+	$source_path = "./download/$arch/opengl32.dll"
 	$filepath = $basedir + "opengl32.dll"
 	if (Test-Path $filepath) {
 		grantRights $filepath
