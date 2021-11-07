@@ -15,12 +15,12 @@ function InstallMesaOpenGL ($arch, $basedir) {
 }
 
 Invoke-WebRequest https://github.com/jvbsl/MesaBinary/releases/download/21/opengl_win_dll.zip -OutFile download.zip
-Invoke-WebRequest https://github.com/gkv311/wglinfo/releases/download/19_05/wglinfo64.exe -OutFile wglinfo.exe
+Invoke-WebRequest https://github.com/gkv311/wglinfo/releases/download/19_05/wglinfo64.exe -OutFile wglinfo64.exe
 Expand-Archive -Force ./download.zip
 
 InstallMesaOpenGL "x86" "$env:WINDIR\SysWOW64\"
 InstallMesaOpenGL "x86_64" "$env:WINDIR\system32\"
 Write-Host "Done"
 $global:LASTEXITCODE = 0
-& '.\wglinfo.exe'
+wglinfo64.exe 
 $global:LASTEXITCODE = 0
