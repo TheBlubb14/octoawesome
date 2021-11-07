@@ -13,7 +13,7 @@ function InstallMesaOpenGL ($arch, $basedir) {
 	Copy-Item $source_path $filepath
 }
 
-Invoke-WebRequest https://github.com/jvbsl/MesaBinary/releases/download/19/opengl_win_dll.zip -OutFile download.zip
+Invoke-WebRequest https://github.com/jvbsl/MesaBinary/releases/download/21/opengl_win_dll.zip -OutFile download.zip
 Expand-Archive -Force ./download.zip
 
 InstallMesaOpenGL "x86" "$env:WINDIR\SysWOW64\"
