@@ -22,7 +22,7 @@ jobs:
 
       - uses: openrndr/setup-opengl@v1.1
       - run: |
-          sudo apt-get libglfw3
+          sudo apt-get install libglfw3
           xvfb-run glxinfo
         if: matrix.os == 'ubuntu-18.04'
 
