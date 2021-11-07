@@ -21,4 +21,6 @@ Expand-Archive -Force ./download.zip
 InstallMesaOpenGL "x86" "$env:WINDIR\SysWOW64\"
 InstallMesaOpenGL "x86_64" "$env:WINDIR\system32\"
 Write-Host "Done"
-.\wglinfo.exe
+$global:LASTEXITCODE = 0
+& '.\wglinfo.exe'
+$global:LASTEXITCODE = 0
