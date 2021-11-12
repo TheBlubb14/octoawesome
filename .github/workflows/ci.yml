@@ -14,33 +14,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix: 
-        os: [windows-latest]
-
+        os: [windows-latest, ubuntu-latest]
+    env:
+      DISPLAY: :99.0
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
-
-      # - uses: openrndr/setup-opengl@v1.1
-      #     if: matrix.os == 'ubuntu-18.04'
-      - run: |
-          sudo apt-get install libglfw3
-          xvfb-run glxinfo
-        if: matrix.os == 'ubuntu-18.04'
-
       - name: Install OpenGL in linux
-        env:
-          DISPLAY: :99.0
         run: |
           sudo apt-get update
-          sudo apt-get install -y locate libgl1-mesa-dev
-          set -e
-          set -x
+          sudo apt-get install -y locate libgl1-mesa-dev libglfw3
           Xvfb :99 &
-        if: matrix.os == 'ubuntu-18.04'
-
+        if: matrix.os == 'ubuntu-latest'
       - name: Install OpenAl on linux
         run: sudo apt-get install libopenal1
-        if: matrix.os == 'ubuntu-18.04'
+        if: matrix.os == 'ubuntu-latest'
 
       - name: Setup OpenGL on windows
         run: ./.github/install-mesa-windows.ps1
